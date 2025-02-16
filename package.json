@@ -3,8 +3,8 @@
   "version": "1.0.1",
   "type": "module",
   "scripts": {
-    "build": "swift build -c release && ditto -c -k --sequesterRsrc --keepParent .build/fft.zip .build/release/fft",
-    "bump": "npm run build && np --no-tests --no-cleanup --no-publish",
+    "build": "swift build -c release && tar -czvf .build/fft.tar.gz -C .build/release fft",
+    "bump": "npm run build && np --no-tests --no-cleanup --no-publish && open .build/",
     "postversion": "replace-regex --from=\"\\d+\\.\\d+\\.\\d+\" --to=\"$npm_package_version\" README.md && git add README.md && git commit -m \"chore: bump\""
   },
   "engines": {
