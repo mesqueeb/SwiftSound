@@ -17,7 +17,7 @@ This tool reads audio files (including `.mp3`, `.wav`, `.flac`, and `.raw`) and 
 
 ### Complete Example
 
-A complete example is located at `[examples](./examples/)`:
+A complete example is located at [examples](./examples/):
 
 1. We started with [elephant.flac](./examples/elephant.flac)
 2. It gets converted into [elephant_flac.raw](./examples/elephant_flac.raw)
