@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "swift build -c release && zip .build/fft.zip .build/release/fft",
-    "bump": "npm run build && np --no-cleanup --no-publish",
+    "bump": "npm run build && np --no-tests --no-cleanup --no-publish",
     "postversion": "replace-regex --from=\"\\d+\\.\\d+\\.\\d+\" --to=\"$npm_package_version\" README.md && git add README.md && git commit -m \"chore: bump\""
   },
   "engines": {
