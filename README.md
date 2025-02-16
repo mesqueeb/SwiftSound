@@ -4,7 +4,7 @@
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fmesqueeb%2FSwiftSound%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/mesqueeb/SwiftSound)
 
 ```
-.package(url: "https://github.com/mesqueeb/SwiftSound", from: "1.0.3")
+brew install mesqueeb/tap/fft
 ```
 
 An Experimental Swift CLI for FFT Analysis
@@ -33,23 +33,7 @@ A complete example is located at [examples](./examples/):
 
 ## 🛠️ How to Use
 
-### **Installation**
-
-1. **Ensure `sox` is installed**:
-   ```bash
-   brew install sox
-   ```
-2. **Clone the repository:**
-   ```bash
-   git clone https://github.com/mesqueeb/SwiftSound.git
-   cd SwiftSound
-   ```
-3. **Run the tool:**
-   ```bash
-   swift run fft <input-file> [options]
-   ```
-
-### **Usage Overview:**
+### Usage Overview
 
 ```
 OVERVIEW: A Swift command-line tool for FFT analysis.
@@ -88,6 +72,30 @@ OPTIONS:
    ```bash
    swift run fft music.flac --svg --sample-rate 48000 --max-frequency 5000
    ```
+
+### Build from Source
+
+```bash
+git clone https://github.com/mesqueeb/SwiftSound.git
+cd SwiftSound
+brew install sox
+swift build
+swift run fft <input-file> [options]
+```
+
+### Use the Swift code in your project
+
+```
+.package(url: "https://github.com/mesqueeb/SwiftSound", from: "1.0.3")
+```
+
+```swift
+import SwiftSound
+
+let result = stft(samples: [/** ... */], sampleRate: 44100.0)
+
+print("result:", result)
+```
 
 ## 📚 What I Learned About Sound
 
