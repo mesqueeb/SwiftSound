@@ -1,6 +1,6 @@
 {
   "name": "SwiftSound",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "build": "swift build -c release && ditto -c -k --sequesterRsrc --keepParent .build/fft.zip .build/release/fft",
