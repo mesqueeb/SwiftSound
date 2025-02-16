@@ -2,6 +2,7 @@
 .vscode/
 
 .swiftpm/
+node_modules
 
 # Xcode
 #
