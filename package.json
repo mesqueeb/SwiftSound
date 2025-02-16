@@ -4,11 +4,10 @@
   "type": "module",
   "scripts": {
     "compile": "swift build -c release",
-    "codesign": "codesign --timestamp --options runtime --sign \"Apple Development: Lucas Eugene M. Van Ammel (8Q8S48JW59)\" .build/release/fft",
-    "zip": "tar -czvf .build/fft.tar.gz -C .build/release fft",
-    "notarize": "xcrun notarytool submit .build/fft.tar.gz --keychain-profile \"AC_PASSWORD\" --wait",
-    "staple": "xcrun stapler staple .build/fft.tar.gz",
-    "build": "npm run compile && npm run codesign && npm run zip && npm run notarize && npm run staple",
+    "codesign": "codesign --timestamp --options runtime --sign \"Developer ID Application: Lucas Eugene M. Van Ammel (8ZRM3D7KC6)\" .build/release/fft",
+    "zip": "ditto  -c -k --norsrc --noextattr ./.build/release/fft ./.build/fft.zip",
+    "notarize": "xcrun notarytool submit ./.build/fft.zip --keychain-profile \"AC_PASSWORD\" --wait",
+    "build": "npm run compile && npm run codesign && npm run zip && npm run notarize",
     "bump": "npm run build && np --no-tests --no-cleanup --no-publish && open .build/",
     "postversion": "replace-regex --from=\"\\d+\\.\\d+\\.\\d+\" --to=\"$npm_package_version\" README.md && git add README.md && git commit -m \"chore: bump\""
   },
