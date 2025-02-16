@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "compile": "swift build -c release",
-    "codesign": "codesign --timestamp --options runtime --sign \"Developer ID Application: Luca Ban (8ZRM3D7KC6)\" .build/release/fft",
+    "codesign": "codesign --timestamp --options runtime --sign \"Apple Development: Lucas Eugene M. Van Ammel (8Q8S48JW59)\" .build/release/fft",
     "zip": "tar -czvf .build/fft.tar.gz -C .build/release fft",
     "notarize": "xcrun notarytool submit .build/fft.tar.gz --keychain-profile \"AC_PASSWORD\" --wait",
     "staple": "xcrun stapler staple .build/fft.tar.gz",
