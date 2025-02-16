@@ -54,7 +54,7 @@ OPTIONS:
   -h, --help              Show help information.
 ```
 
-## Use Case Examples
+### Use Case Examples
 
 1. **Convert and Analyze a `.mp3` File:**
 
@@ -72,6 +72,22 @@ OPTIONS:
    ```bash
    swift run fft music.flac --svg --sample-rate 48000 --max-frequency 5000
    ```
+
+### Complete Example
+
+A complete example is located at `[examples](./examples/)`:
+
+1. We started with [elephant.flac](./examples/elephant.flac)
+2. It gets converted into [elephant_flac.raw](./examples/elephant_flac.raw)
+3. The raw file is then converted to raw amplitude values visible at [elephant_raw_amplitudes.json](./examples/elephant_raw_amplitudes.json)
+
+   ```json
+   [0.0018920898,0.0014038086,0.001739502,0.0013427734,0.0008544922,0.0007324219,-0.00012207031,-0.00036621094,-0.00048828125,-0.00076293945,-0.00033569336,-0.00088500977,0.00012207031,-0.00039672852,0.0004272461,-0.00021362305,0.00021362305,-0.00021362305,0,-0.0005187988,3.0517578e-05,-0.00039672852,0.00015258789,-0.0005493164,0.00091552734,6.1035156e-05,0.0014038086,0.00076293945,0.0013427734,0.00076293945,0.00061035156,0.00033569336,9.1552734e-05,-0.00021362305,-0.00018310547,...]
+   ```
+
+4. The raw amplitude values are then converted into a spectrogram at [elephant_spectrogram.svg](./examples/elephant_spectrogram.svg)
+
+   ![elephant_spectrogram](./examples/elephant_spectrogram.svg)
 
 ## 📚 What I Learned About Sound
 
