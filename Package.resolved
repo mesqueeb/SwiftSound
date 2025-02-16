@@ -1,0 +1,24 @@
+{
+  "originHash" : "737ce5ddac2403f543653c0d061e6a1390792cdc06c1a7d7507f5f1c97dbd779",
+  "pins" : [
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "revision" : "41982a3656a71c768319979febd796c6fd111d5c",
+        "version" : "1.5.0"
+      }
+    },
+    {
+      "identity" : "swiftplot",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/KarthikRIyer/swiftplot.git",
+      "state" : {
+        "revision" : "c5424eb8688217029d44e941d3a1d2ccc18c3a82",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
