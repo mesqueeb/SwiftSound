@@ -24,5 +24,6 @@
     "url": "https://github.com/mesqueeb/SwiftSound.git"
   },
   "homepage": "https://github.com/mesqueeb/SwiftSound#readme",
-  "bugs": "https://github.com/mesqueeb/SwiftSound/issues"
+  "bugs": "https://github.com/mesqueeb/SwiftSound/issues",
+  "packageManager": "pnpm@11.3.0"
 }
