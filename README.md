@@ -86,7 +86,7 @@ swift run fft <input-file> [options]
 ### Use the Swift code in your project
 
 ```
-.package(url: "https://github.com/mesqueeb/SwiftSound", from: "1.0.3")
+.package(url: "https://github.com/mesqueeb/SwiftSound", from: "1.0.4")
 ```
 
 ```swift
