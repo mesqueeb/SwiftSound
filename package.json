@@ -9,7 +9,7 @@
     "notarize": "xcrun notarytool submit ./.build/fft.zip --keychain-profile \"AC_PASSWORD\" --wait",
     "build": "npm run compile && npm run codesign && npm run zip && npm run notarize",
     "sync-readme": "replace-regex --from=\"\\d+\\.\\d+\\.\\d+\" --to=\"$npm_package_version\" README.md",
-    "release": "pnpm run build && bumpp --no-push --all -x \"pnpm run sync-readme\" && git push --follow-tags && gh release create $(git describe --tags --abbrev=0) --generate-notes --notes \"$(git log --pretty='- %s  %h' $(git describe --tags --abbrev=0 HEAD~1 2>/dev/null || git rev-list --max-parents=0 HEAD)..HEAD~1)\" && open .build/"
+    "release": "pnpm run build && bumpp --no-push --all -x \"pnpm run sync-readme\" && git push --follow-tags && gh release create $(git describe --tags --abbrev=0) --generate-notes --notes \"$(git log --pretty='- %s  %h' $(git describe --tags --abbrev=0 HEAD~1 2>/dev/null || git rev-list --max-parents=0 HEAD)..HEAD~1)\" ./.build/fft.zip"
   },
   "engines": {
     "node": ">=20"
