@@ -25,5 +25,5 @@
   },
   "homepage": "https://github.com/mesqueeb/SwiftSound#readme",
   "bugs": "https://github.com/mesqueeb/SwiftSound/issues",
-  "packageManager": "pnpm@11.27.0"
+  "packageManager": "pnpm@11.28.0"
 }
